@@ -1,0 +1,19 @@
+<svg width="512" height="512" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <!-- Solid Background for Android Launcher/Canvas Context -->
+  <rect width="512" height="512" rx="112" fill="#121212" />
+
+  <!-- Center Graphic Group (No complex filters, pure paths) -->
+  <g transform="translate(256, 256)">
+    
+    <!-- The Wheel: Smooth, bold abstract minimalist wheel track -->
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#FF6A00" stroke-width="32" stroke-linecap="round" stroke-dasharray="540 200" transform="rotate(-45)" />
+    
+    <!-- The Assist Element: Clean, minimalist geometric node representing direction & human care -->
+    <!-- Upward/forward pointing vector that fits perfectly inside the wheel geometry -->
+    <path d="M -40,40 L 0,-40 L 40,40" fill="none" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Smooth Assist Core Node -->
+    <circle cx="0" cy="-9" r="16" fill="#FF6A00" />
+    
+  </g>
+</svg>
