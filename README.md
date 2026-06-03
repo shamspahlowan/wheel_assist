@@ -77,4 +77,4 @@ Wheel Assist is a Flutter mobile app for controlling a BLE-enabled wheelchair/ve
 
 ## Visuals
 
-![Home Screen](docs/screen_1.jpeg)
+![Home Screen](assets/images/docs/screen_1.jpeg)
