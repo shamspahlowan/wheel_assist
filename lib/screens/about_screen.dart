@@ -8,7 +8,7 @@ class TeamMember {
   final String role;
   final String contribution;
   final String quote;
-  final String? imagePath; // e.g. 'assets/images/shozen.jpg' — null → initials
+  final String? imagePath;
   final Color accentColor;
   final String? github;
   final String? linkedin;
@@ -33,8 +33,6 @@ class TeamMember {
   }
 }
 
-// ─── Team data — fill in your real details ────────────────────────────────────
-
 const List<TeamMember> _team = [
   TeamMember(
     name: 'Shams Pahlowan Soad',
@@ -45,53 +43,13 @@ const List<TeamMember> _team = [
     quote:
         'If it can\'t run on a microcontroller, is it even real engineering?',
     accentColor: Colors.deepOrange,
-    imagePath: null, // replace with 'assets/images/shozen.jpg'
-    github: 'https://github.com/',
-    linkedin: 'https://linkedin.com/in/',
-    facebook: 'https://facebook.com/',
-  ),
-  TeamMember(
-    name: 'Meheraj Hasan',
-    role: 'AI Engineer',
-    contribution:
-        'Designed the ESP32 circuit, wrote the motor-control firmware, and '
-        'defined the BLE GATT characteristic protocol.',
-    quote: 'Hardware is just software you can\'t git push.',
-    accentColor: Color(0xFF00BCD4),
     imagePath: null,
-    github: 'https://github.com/',
-    linkedin: 'https://linkedin.com/in/',
-    facebook: null,
-  ),
-  TeamMember(
-    name: 'MD. Faysal Khan',
-    role: 'UX & Interaction Design',
-    contribution:
-        'Led the HCI research, user testing sessions, and designed the control '
-        'pad layout, mode toggle flows, and accessibility considerations.',
-    quote: 'A button nobody clicks is a bug, not a feature.',
-    accentColor: Color(0xFF66BB6A),
-    imagePath: null,
-    github: 'https://github.com/',
-    linkedin: 'https://linkedin.com/in/',
-    facebook: 'https://facebook.com/',
-  ),
-  TeamMember(
-    name: 'Rifat Bhuiya',
-    role: 'Systems & Integration',
-    contribution:
-        'Handled end-to-end integration testing, tuning the motor drift '
-        'parameters, and documenting the full system architecture.',
-    quote: 'It worked in theory. Then it worked in practice. Both felt good.',
-    accentColor: Color(0xFFAB47BC),
-    imagePath: null,
-    github: 'https://github.com/',
-    linkedin: null,
-    facebook: 'https://facebook.com/',
+    github: 'https://github.com/shamspahlowan',
+    linkedin: 'https://www.linkedin.com/in/shams-pahlowan/',
+    facebook: 'https://www.facebook.com/',
   ),
 ];
 
-// ─── Screen ───────────────────────────────────────────────────────────────────
 
 class AboutScreen extends StatefulWidget {
   const AboutScreen({super.key});
@@ -170,7 +128,6 @@ class _AboutScreenState extends State<AboutScreen> {
             ),
           ),
 
-          // ── Swipe hint (only on first page) ──
           if (_currentIndex == 0)
             Positioned(
               bottom: 70,
@@ -195,8 +152,6 @@ class _AboutScreenState extends State<AboutScreen> {
     );
   }
 }
-
-// ─── Individual card ──────────────────────────────────────────────────────────
 
 class _TeamCard extends StatelessWidget {
   final TeamMember member;
@@ -506,13 +461,9 @@ class _SocialButton extends StatelessWidget {
     );
   }
 }
-
-// ─── GitHub SVG icon (no package dependency) ─────────────────────────────────
-
 class _GithubIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Icon(Icons.code, size: 18, color: Colors.white70);
-    // Swap for an actual SVG via flutter_svg if you prefer the GitHub mark
   }
 }
